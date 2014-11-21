@@ -576,7 +576,7 @@ function ($compile, $parse, $document, $position, dateFilter, dateParser, datepi
 
       scope.$watch('isOpen', function(value) {
         if (value) {
-          scope.$broadcast('datepicker.focus');
+          // scope.$broadcast('datepicker.focus'); // wu.ranbo@yottabyte.cn NOT auto focus the popup datepicker
           scope.position = appendToBody ? $position.offset(element) : $position.position(element);
           scope.position.top = scope.position.top + element.prop('offsetHeight');
 
